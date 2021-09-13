@@ -1,6 +1,17 @@
 import React from 'react'
-import styles from './styles.module.css'
+import CardForm from './CardForm'
+import CardSimple from './CardSimple'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+export const FormCard = ({ card, children }) => {
+  return <CardForm card={card} children={children} />
+}
+
+export const cardByDefault = {
+  action: '/',
+  method: 'GET',
+  submit: () => console.log('Data Submit')
+}
+
+export const SimpleCard = ({ children }) => {
+  return <CardSimple children={children} />
 }
