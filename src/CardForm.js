@@ -7,12 +7,15 @@ function CardForm({ card, children }) {
       <form
         action={card.action}
         method={card.method}
-        onSubmit={(e) => card.submit(e)}
+        onSubmit={(e) => {
+          card.submit(e)
+        }}
+        encType={card.encType}
         className={style.form}
       >
-        <button className={style.pointer}>
+        <div className={style.pointer}>
           <div className={style.containerBorder} children={children}></div>
-        </button>
+        </div>
       </form>
     </article>
   )

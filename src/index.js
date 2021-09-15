@@ -9,7 +9,8 @@ export const FormCard = ({ card, children }) => {
 export const cardByDefault = {
   action: '/',
   method: 'GET',
-  submit: () => console.log('Data Submit')
+  submit: () => console.log('Data Submit'),
+  encType: 'application/x-www-form-urlencoded'
 }
 
 export const SimpleCard = ({ children }) => {
